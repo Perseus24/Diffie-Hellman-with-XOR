@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link href="styles.css" rel="stylesheet"> -->
+        <link href="./output.css" rel="stylesheet">
+        <title>Encrypt and Decrypt</title>
+    </head>
+    <body class="pt-10">
+        <div class="w-full flex justify-center">
+            <a id="encrypt-link" onclick="switchThingsDesc(0)" class="active-link"  href="#">ENCRYPTION</a> &nbsp;AND&nbsp; <a id="decrypt-link" href="#" onclick="switchThingsDesc(1)">DECRYPTION</a>&nbsp;MESSAGE</div>
+        <div class="message-row">
+            <div class="message-input">
+                <textarea rows="2" placeholder="Enter Message" id="message" class="message-area"></textarea>
+                <input type="text" id="inputPK" placeholder="Enter Public Key">
+                <button class="encrypt-1" onclick="encryptMessage(1)">
+                    <img src="key.png">
+                    <span id="type">Encrypt</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="line"></div>
+            <p>OR</p>
+            <div class="line"></div>
+        </div>
+        <div class="column-containers gap-none">
+            <div class="container">
+                <p>HERE IS YOUR PUBLIC KEY! USE IT TO DECRYPT THE MESSAGE!</p>
+                <div class="public-key-container">
+                    <p id="public-key"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label>Upload .txt file</label>
+                    <input type="file" id="fileInput" accept=".txt">
+                    <div class="row">
+                        <input type="text" id="inputPK" placeholder="Enter Public Key">
+                        <div>
+                            <button class="encrypt-1" onclick="encryptMessage(0)">
+                                <img src="key.png">
+                                <span id="type">Encrypt</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="message-row-2">
+            <h3>Encrypted Message:   </h3>
+            <p id="encrypted-message"></p>
+        </div>
+        <div class="column-containers none">
+            <div class="container">
+                <p>HERE IS YOUR PUBLIC KEY! USE IT TO DECRYPT THE MESSAGE!</p>
+                <div class="public-key-container">
+                    <p id="public-key"></p>
+                </div>
+            </div>
+            <div class="container">
+                <p>You can also download a .txt file of the encrypted message!</p>
+                <div class="public-key-container">
+                    <p id="downloadButton">Download Word File</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex w-full justify-center">
+            <div class="bg-black rounded-lg p-4 text-white hover:bg-white">TEMPORARY</div>
+        </div>
+        <!-- <button id="downloadButton">Download Word File</button>
+        <input type="file" id="fileInput" accept=".txt">
+        <p>Decrypted Message:</p>
+        <h2 id="decrypted-message"></h2>
+        <label>Enter Public Key:</label>
+        <input type="number" id="publicKey">
+        <button onclick="decryptMessage()">Decrypt</button> -->
+        <!-- <footer>
+            <p>Copyright © 2022</p>
+        </footer> -->
+        <script src="script.js"></script>
+    </body>
+</html>
